@@ -10,20 +10,32 @@ class Program
     public static void Main(string[] args)
     {
         // This function calculates the area of a triangle
-        int baseOfTriangle;
-        int heightOfTriangle;
+        const double TAX_RATE = 0.18;
+        double numbersOfHoursWorked;
+        double hourlyRate;
+        double takeHomeSalary;
+        double governmentTax;
 
-        Console.WriteLine("This program calculates the area of a triangle.");
+        // input
+        Console.WriteLine("This program determines your pay.");
         Console.WriteLine("");
 
-        Console.Write("Enter the base measurement: ");
-        baseOfTriangle = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Enter the height measurement: ");
-        heightOfTriangle = Convert.ToInt32(Console.ReadLine());
-
+        Console.Write("Enter the numbers of hours worked: ");
+        numbersOfHoursWorked = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Enter the hourly rate: ");
+        hourlyRate = Convert.ToDouble(Console.ReadLine());
+       
+        
+        // process
         Console.WriteLine("");
-        Console.WriteLine("The area is: " + (baseOfTriangle * heightOfTriangle) / 2 + " " + "cm².");
+        takeHomeSalary = (numbersOfHoursWorked * hourlyRate) * (1.00 - TAX_RATE);
+        governmentTax = (numbersOfHoursWorked * hourlyRate) * TAX_RATE;
+
+        // output
+        Console.WriteLine("Your pay will be: $ " + takeHomeSalary.ToString("0.00"));
+        Console.WriteLine("The government will take: $ " + governmentTax.ToString("0.00"));
 
         Console.WriteLine("\nDone.");
     }
 }
+        
