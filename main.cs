@@ -24,7 +24,7 @@ class Program
         numbersOfHoursWorked = Convert.ToDouble(Console.ReadLine());
         Console.Write("Enter the hourly rate: ");
         hourlyRate = Convert.ToDouble(Console.ReadLine());
-       
+
         
         // process
         Console.WriteLine("");
@@ -38,4 +38,3 @@ class Program
         Console.WriteLine("\nDone.");
     }
 }
-        
