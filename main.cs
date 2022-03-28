@@ -25,7 +25,6 @@ class Program
         Console.Write("Enter the hourly rate: ");
         hourlyRate = Convert.ToDouble(Console.ReadLine());
 
-        
         // process
         Console.WriteLine("");
         takeHomeSalary = (numbersOfHoursWorked * hourlyRate) * (1.00 - TAX_RATE);
